@@ -30,7 +30,7 @@ app.use('/info',info);
 
 
 
-var server=app.listen(80,()=>{
+var server=app.listen(1337,()=>{
 console.log("SERVER START.");
 });
 function MiddlewareTest(req,res,next)
