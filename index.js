@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 var authen=require('./api/authen');
 app.use('/authen',authen);
 
-app.use(MiddlewareTest);
+//app.use(MiddlewareTest);
 
 var info=require('./api/info');
 app.use('/info',info);
