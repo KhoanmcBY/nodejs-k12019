@@ -6,19 +6,19 @@ var bodyParser=require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 
-var mongoose = require('mongoose');
-mongoose.Promise=global.Promise;
-let option={useUnifiedTopology: true,useNewUrlParser: true};
-let url='mongodb://127.0.0.1:27017/byk12019';
-mongoose.connect(url,option );
+// var mongoose = require('mongoose');
+// mongoose.Promise=global.Promise;
+// let option={useUnifiedTopology: true,useNewUrlParser: true};
+// let url='mongodb://127.0.0.1:27017/byk12019';
+// mongoose.connect(url,option );
 
-    var db = mongoose.connection;
-    db.on('error', console.error.bind(console, 'connection error:'));
-    db.once('open', function() {
+//     var db = mongoose.connection;
+//     db.on('error', console.error.bind(console, 'connection error:'));
+//     db.once('open', function() {
     
-    });
+//     });
 
 var authen=require('./api/authen');
 app.use('/authen',authen);
